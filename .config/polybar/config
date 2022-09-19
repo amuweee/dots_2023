@@ -1,0 +1,319 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+
+
+;===================TOP BAR======================
+[bar/top]
+
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 20
+offset-y = 0 
+offset-x = 0
+
+border-top-size = 5
+border-bottom-size = 0
+border-right-size = 10
+border-left-size = 10
+
+;----------;
+; LOCATION ;
+;----------;
+
+bottom = false
+monitor = eDP1
+wm-restack = none
+override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = "SauceCodePro Nerd Font:style=Bold:pixelsize=16;4"
+
+;--------;
+; COLORS ;
+;--------;
+
+background = #00ffffff
+foreground = #ebdbb2
+border-color = 0
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
+
+fixed-center = true
+padding-left = 2 
+padding-right = 2
+module-margin = 1.5
+
+modules-left = filesystem volume backlight battery updates-pacman
+modules-center = i3
+modules-right = system-cpu-temppercore cpu memory date time
+
+tray-position = none
+tray-detached = true
+;===================TOP BAR======================
+
+
+
+
+;===================BOTTOM BAR======================
+[bar/bottom]
+
+inherit = bar/top
+font-1 = WeatherIcons:size=14;1
+font-3 = MaterialIcons:size=14;1
+
+bottom = true
+modules-left = spotify
+modules-center = i3
+; modules-right = wlan vpn-openvpn-isrunning network-localip network-ipinfo
+modules-right = wlan network-ipinfo
+border-bottom-size = 2
+;===================BOTTOM BAR======================
+
+
+
+
+;---------;
+; MODULES ;
+;---------;
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+enable-scroll = false
+
+label-unfocused-foreground = #ebdbb2
+label-focused-foreground = #689d6a
+label-urgent-foreground = #cc241d
+
+
+index-sort = true
+wrapping-scroll = false
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-default = 
+format = <label-state>
+label-focused = %icon%
+label-focused-padding = 2
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-visible = %icon%
+label-visible-padding = 2
+label-urgent = %icon%
+label-urgent-padding = 2
+
+
+[module/time]
+type = internal/date
+
+interval = 1.0
+
+date =  %H:%M
+
+[module/date]
+type = internal/date
+date =  %e %B - %A
+label = %date%
+
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+
+poll-interval = 1
+
+full-at = 99
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full = <ramp-capacity>  <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-offline = <label-offline>
+host = 127.0.0.1
+port = 6600
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight 
+
+format = <ramp> <label>
+
+label = %percentage%%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/wlan]
+type = internal/network
+
+interface = wlan0
+
+interval = 2
+
+label-connected =  %essid% |  %downspeed% |  %upspeed%
+label-disconnected =  Not Connected
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage%%
+
+
+[module/memory]
+type = internal/memory
+label =  %gb_used%
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+label-connected =  %downspeed% |  %upspeed%
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+mount-1 = /home
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = false 
+
+; Spacing between entries
+; Default: 2
+spacing = 4
+
+
+[module/info-redshift-temp]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-redshift-temp.sh
+interval = 5
+
+
+[module/system-cpu-temppercore]
+type = custom/script
+format-prefix = " "
+exec = ~/.config/polybar/scripts/system-cpu-temppercore.sh
+interval = 2
+
+
+[module/network-localip]
+type = custom/script
+exec = ~/.config/polybar/scripts/network-localip.sh
+format-prefix = " "
+interval = 10
+
+
+[module/network-ipinfo]
+type = custom/script
+exec = ~/.config/polybar/scripts/network-ipinfo.sh
+format-prefix = " "
+interval = 10
+
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-pacman.sh
+format-prefix = " "
+interval = 600
+
+
+[module/vpn-openvpn-isrunning]
+type = custom/script
+exec = ~/.config/polybar/scripts/vpn-openvpn-isrunning.sh
+format-prefix = " "
+interval = 5
+
+
+[module/weather]
+type = custom/script
+exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
+interval = 60
+label-font = 3

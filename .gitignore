@@ -1,0 +1,37 @@
+# ignore everything
+/**
+
+# Git aliases, identification info
+!/.gitconfig
+!/.gitignore
+!/.gitexcludes
+
+# system configs on /home
+!/.zshrc
+!/.zsh
+!/.Xmodmap
+!/.xinitrc
+
+# files to track in .config
+!/.config/
+!/.config/i3
+!/.config/i3/config
+
+!/.config/alacritty
+!/.config/alacritty/alacritty.yml
+
+!/.config/polybar
+!/.config/polybar/*
+!/.config/polybar/scripts
+!/.config/polybar/scripts/*
+
+!/.config/picom
+!/.config/picom/picom.conf
+
+!/.config/zathura
+!/.config/zathura/zathurarc
+
+!/.config/rofi
+!/.config/rofi/config.rasi
+!/.config/rofi/gruvbox-rofi
+!/.config/rofi/gruvbox-rofi/*
