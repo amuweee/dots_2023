@@ -1,3 +1,5 @@
 [user]
 	name = Mengyu Bai
 	email = mengyu.bai@gmail.com
+[core]
+	editor = nvim
