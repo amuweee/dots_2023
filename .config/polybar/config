@@ -54,9 +54,9 @@ font-0 = "SauceCodePro Nerd Font:style=Bold:pixelsize=16;4"
 ; COLORS ;
 ;--------;
 
-background = #00ffffff
+background = #282828
 foreground = #ebdbb2
-border-color = 0
+border-color = #282828
 
 ;---------------;
 ; MISCELLANEOUS ;

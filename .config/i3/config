@@ -31,7 +31,7 @@ floating_modifier $mod
 # <colorclass> <border> <background> <text> <indicator> <child_border>
 client.focused          #8ec07c #8ec07c #8ec07c #8ec07c #8ec07c 
 client.focused_inactive #282828 #282828 #282828 #282828 #282828
-client.unfocused        #3c3836 #3c3836 #a89984 #292d2e #222222
+client.unfocused        #282828 #282828 #282828 #282828 #282828
 client.urgent           #cc241d #cc241d #cc241d #cc241d #cc241d  
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 client.background       #282828
@@ -63,7 +63,7 @@ exec --no-startup-id nitrogen --restore &
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh &amp;
 
 # compistor
-exec_always --no-startup-id picom -b
+# exec_always --no-startup-id picom -b
 
 # openweather service
 # exec_always --no-startup-id ntfd &
@@ -82,6 +82,7 @@ exec --no-startup-id xset r rate 220 40
 
 # start a terminal
 bindsym $mod+Return exec WINIT_HIDPI_FACTOR=1.0 alacritty
+#bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -133,10 +134,10 @@ bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+# bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 
 # lock by blurring the screen:
-bindsym $mod+Shift+m exec ~/.config/i3/scripts/blur-lock
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/blur-lock
 
 
 

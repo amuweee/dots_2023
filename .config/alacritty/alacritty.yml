@@ -23,7 +23,7 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -61,7 +61,7 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -327,7 +327,7 @@ colors: *gruvbox_material_medium_dark
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
 # background_opacity: 0.95
-window.opacity: 0.95
+window.opacity: 1.0
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -415,7 +415,7 @@ live_config_reload: true
   # If this is `true`, the cursor is temporarily hidden when typing.
   #hide_when_typing: false
 
-# url:
+url:
     # URL launcher
     #
     # This program is executed when clicking on a text which is recognized as a
@@ -427,8 +427,8 @@ live_config_reload: true
     #   - (macOS) open
     #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
-#    launcher:
-#      program: firefox
+  launcher:
+    program: firefox
 #      args:
 #        - --new-window
 
