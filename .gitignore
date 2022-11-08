@@ -35,3 +35,15 @@
 !/.config/rofi/config.rasi
 !/.config/rofi/gruvbox-rofi
 !/.config/rofi/gruvbox-rofi/*
+
+!/.config/nvim
+!/.config/nvim/*
+!/.config/nvim/lua
+!/.config/nvim/lua/user
+!/.config/nvim/lua/user/*
+!/.config/nvim/lua/user/lsp
+!/.config/nvim/lua/user/lsp/*
+!/.config/nvim/lua/user/lsp/settings
+!/.config/nvim/lua/user/lsp/settings/*
+
+
