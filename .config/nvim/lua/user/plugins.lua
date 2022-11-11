@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "ggandor/lightspeed.nvim"
   use "nvim-lualine/lualine.nvim"
+  use "akinsho/toggleterm.nvim"
 
   -- coloschemes
   use "sainnhe/gruvbox-material" -- Gruvbox material colorscheme
