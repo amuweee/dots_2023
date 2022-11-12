@@ -53,6 +53,7 @@ return packer.startup(function(use)
   use "ggandor/lightspeed.nvim"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- coloschemes
   use "sainnhe/gruvbox-material" -- Gruvbox material colorscheme
