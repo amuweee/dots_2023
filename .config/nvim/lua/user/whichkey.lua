@@ -87,8 +87,8 @@ local mappings = {
   --[[   "Buffers", ]]
   --[[ }, ]]
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
+  --[[ ["w"] = { "<cmd>w!<CR>", "Save" }, ]]
+  --[[ ["q"] = { "<cmd>q!<CR>", "Quit" }, ]]
   --[[ ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }, ]]
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   --[[ ["f"] = { ]]
@@ -146,28 +146,28 @@ local mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to Definition" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Go to Declaration" },
+    --[[ d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" }, ]]
+    --[[ w = { ]]
+    --[[   "<cmd>Telescope lsp_workspace_diagnostics<cr>", ]]
+    --[[   "Workspace Diagnostics", ]]
+    --[[ }, ]]
+    f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
+    k = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show Hover" },
+    --[[ I = { "<cmd>LspInstallInfo<cr>", "Installer Info" }, ]]
+    --[[ j = { ]]
+    --[[   "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", ]]
+    --[[   "Next Diagnostic", ]]
+    --[[ }, ]]
+    --[[ k = { ]]
+    --[[   "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", ]]
+    --[[   "Prev Diagnostic", ]]
+    --[[ }, ]]
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    r = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",

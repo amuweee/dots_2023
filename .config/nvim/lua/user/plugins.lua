@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
+  use "folke/trouble.nvim"
 
   -- coloschemes
   use "sainnhe/gruvbox-material" -- Gruvbox material colorscheme
@@ -73,9 +74,10 @@ return packer.startup(function(use)
   use 'rafamadriz/friendly-snippets' -- snippet repo
 
   -- LSP
-  use "neovim/nvim-lspconfig"             -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+  use "neovim/nvim-lspconfig"             -- enable LSP
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
