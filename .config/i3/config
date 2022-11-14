@@ -68,12 +68,8 @@ exec_always --no-startup-id sh ~/.config/polybar/launch.sh &amp;
 # openweather service
 # exec_always --no-startup-id ntfd &
 
-# set wallpaper
-exec --no-startup-id sleep 2 && nitrogen --restore
-
 # set key speed
 exec --no-startup-id xset r rate 220 40
-
 
 
 ##################################################
@@ -81,8 +77,8 @@ exec --no-startup-id xset r rate 220 40
 ##################################################
 
 # start a terminal
-bindsym $mod+Return exec WINIT_HIDPI_FACTOR=1.0 alacritty
-#bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec WINIT_HIDPI_FACTOR=1.0 alacritty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -58,8 +58,8 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Window splits
-keymap("n", "<leader>bv", ":vsplit<CR>", opts)
-keymap("n", "<leader>bh", ":split<CR>", opts)
+--[[ keymap("n", "<leader>bv", ":vsplit<CR>", opts) ]]
+--[[ keymap("n", "<leader>bh", ":split<CR>", opts) ]]
 
 -- Visual Block --
 -- Move text up and down
