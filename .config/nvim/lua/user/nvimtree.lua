@@ -50,6 +50,7 @@ nvim_tree.setup {
     },
     view = {
         width = 30,
+        adaptive_size = true,
         --[[ height = 30, ]]
         hide_root_folder = false,
         side = "left",

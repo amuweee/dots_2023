@@ -147,7 +147,7 @@ local mappings = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to Definition" },
-    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Go to Declaration" },
+    --[[ D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Go to Declaration" }, ]]
     --[[ d = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics" }, ]]
     --[[ w = { ]]
     --[[   "<cmd>Telescope lsp_workspace_diagnostics<cr>", ]]
@@ -156,7 +156,7 @@ local mappings = {
     f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     --[[ k = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show Hover" }, ]]
-    k = { '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded" })<CR>', "Show Diagnostics" },
+    D = { '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded" })<CR>', "Show Diagnostics" },
     --[[ I = { "<cmd>LspInstallInfo<cr>", "Installer Info" }, ]]
     --[[ j = { ]]
     --[[   "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", ]]
