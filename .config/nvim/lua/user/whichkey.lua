@@ -108,7 +108,7 @@ local mappings = {
   f = {
     name = "Find",
     f = { "<cmd>Telescope find_files<CR>", "Find Files" },
-    t = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    t = { "<cmd>Telescope live_grep<CR>", "Find Text" },
   },
 
   p = {
@@ -155,7 +155,8 @@ local mappings = {
     --[[ }, ]]
     f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    k = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show Hover" },
+    --[[ k = { "<cmd>lua vim.lsp.buf.hover()<CR>", "Show Hover" }, ]]
+    k = { '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "rounded" })<CR>', "Show Diagnostics" },
     --[[ I = { "<cmd>LspInstallInfo<cr>", "Installer Info" }, ]]
     --[[ j = { ]]
     --[[   "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", ]]

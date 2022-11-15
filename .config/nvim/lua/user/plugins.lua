@@ -56,6 +56,8 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/which-key.nvim"
   use "folke/trouble.nvim"
+  use "goolord/alpha-nvim"
+  use "folke/todo-comments.nvim"
 
   -- coloschemes
   use "sainnhe/gruvbox-material" -- Gruvbox material colorscheme
