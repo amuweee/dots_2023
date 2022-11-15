@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
   use "goolord/alpha-nvim"
   use "folke/todo-comments.nvim"
+  use "ahmedkhalf/project.nvim"
 
   -- coloschemes
   use "sainnhe/gruvbox-material" -- Gruvbox material colorscheme
@@ -84,6 +85,7 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+  use "nvim-telescope/telescope-project.nvim"
 
   -- Treesitter --
   use {

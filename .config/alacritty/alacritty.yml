@@ -72,7 +72,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Fullscreen
 
   # Window title
   #title: Alacritty
@@ -119,7 +119,7 @@ font:
     family: SauceCodePro Nerd Font
     style: Bold Italic
 
-  size: 7
+  size: 14
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -276,7 +276,7 @@ schemes:
       white:   '0xe6d5ae'
 
 # Apply the color scheme.
-colors: *gruvbox_material_medium_dark
+colors: *gruvbox_material_soft_dark
 
 
 
@@ -389,8 +389,8 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+ program: /bin/zsh
 #  args:
 #    - --login
 
