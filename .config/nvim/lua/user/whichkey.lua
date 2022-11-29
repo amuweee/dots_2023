@@ -199,6 +199,11 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  x = {
+    name = "Extras",
+    r = { "<cmd>CellularAutomaton make_it_rain<cr>", "Make it rain" },
+    g = { "<cmd>CellularAutomaton game_of_life<cr>", "Game of life" },
+  }
 }
 
 local vopts = {
